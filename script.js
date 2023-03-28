@@ -94,15 +94,12 @@ async function drawPeople(filterString) {
  * @returns {array} With people match the searched string
  */
 async function filterPeople(filterString) {
-  let filteredArray;
   if (filterString) {
-    filteredArray = (await dataArray).filter((person) =>
+    return (await dataArray).filter((person) =>
       person.name.toLowerCase().includes(filterString)
     );
-  } else {
-    filteredArray = (await dataArray).slice();
   }
-  return filteredArray;
+  return await dataArray;
 }
 
 /**
