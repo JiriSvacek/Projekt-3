@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="default.png" />
+    <title>Projekt 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <style>
+      html {
+        overflow-y: hidden;
+      }
+      #field {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1.5fr));
+        grid-gap: 1em;
+        overflow-y: auto;
+      }
+      .card {
+        max-height: 32rem;
+        transition: transform 0.5s ease;
+        border-radius: 0.5rem;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .is-6 {
+        padding-left: 0.15rem;
+      }
+    </style>
+    <section class="hero is-primary is-fullheight" id="app">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns">
+            <div class="column is-4 is-offset-4">
+              <div class="box">
+                <div id="search" class="control"></div>
+              </div>
+            </div>
+          </div>
+          <div id="field" class="box"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
